@@ -2,6 +2,8 @@
 DROP DATABASE if exists bank_homework;
 
 -- Create a bank_homework database
+CREATE DATABASE bank_homework;
+\c bank_homework
 
 
 -- Connect to the bank_homework databases
