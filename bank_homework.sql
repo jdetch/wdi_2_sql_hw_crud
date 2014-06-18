@@ -1,5 +1,5 @@
 -- In case there is already a bank_homework database, drop it
-
+DROP DATABASE if exists bank_homework;
 
 -- Create a bank_homework database
 
