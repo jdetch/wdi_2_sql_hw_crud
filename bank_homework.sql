@@ -88,3 +88,5 @@ SELECT DISTINCT recipient_name FROM payments;
 
 
 -- In a single query, select all payments matching the name of one of the payers (choose any single one)
+
+SElECT * FROM payments WHERE payer_name ILIKE 'John Doe';
