@@ -63,6 +63,8 @@ UPDATE payments SET amount = '20010.00' WHERE id = 9;
 
 -- Delete all payments with an amount under $2
 
+DELETE FROM payments WHERE amount < '2.00';
+
 
 -- Select all entries from the payments table
 
