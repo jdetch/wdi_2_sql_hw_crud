@@ -85,8 +85,9 @@ SELECT DISTINCT recipient_name FROM payments;
 
 
 -- In a single query, select all payments with a blank description
-
+SELECT * FROM payments WHERE description is NULL;
 
 -- In a single query, select all payments matching the name of one of the payers (choose any single one)
 
+-- why does 'ILIKE' work? Documentation says 'LIKE'
 SElECT * FROM payments WHERE payer_name ILIKE 'John Doe';
