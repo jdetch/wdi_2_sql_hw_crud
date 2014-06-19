@@ -68,6 +68,8 @@ DELETE FROM payments WHERE amount < '2.00';
 
 -- Select all entries from the payments table
 
+SELECT * FROM payments;
+
 
 -- In a single query, output all payments ordered from the largest to the smallest
 
