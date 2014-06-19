@@ -3,15 +3,23 @@ DROP DATABASE if exists bank_homework;
 
 -- Create a bank_homework database
 CREATE DATABASE bank_homework;
-\c bank_homework
-
 
 -- Connect to the bank_homework databases
-
+\c bank_homework
 
 -- Create a payments table
 --  The table should have columns of id, created_at, amount, payer_name,
 --  recipient_name, and description with the appropriate datatypes
+
+CREATE TABLE payments (
+  id SERIAL PRIMARY KEY,
+  -- need DATETIME instead? Couldn't find in documentation
+  created_at DATE,
+  amount NUMERIC,
+  payer_name TEXT,
+  recipient_name TEXT,
+  description TEXT
+);
 
 
 -- Alter the payments table, add the column of `zipcode`
