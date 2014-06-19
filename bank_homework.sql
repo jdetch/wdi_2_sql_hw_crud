@@ -73,8 +73,12 @@ SELECT * FROM payments;
 
 -- In a single query, output all payments ordered from the largest to the smallest
 
+SELECT * FROM payments ORDER BY price DESC;
+
 
 -- In a single query, output the names of all distinct recipients
+
+SELECT DISTINCT recipient_name FROM payments;
 
 
 -- In a single query, select all payments created in the past week
