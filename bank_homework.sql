@@ -15,15 +15,15 @@ CREATE TABLE payments (
   id SERIAL PRIMARY KEY,
   -- need DATETIME instead? Couldn't find in documentation
   created_at DATE,
-  amount NUMERIC,
+  amount NUMERIC (30, 2),
   payer_name TEXT,
   recipient_name TEXT,
   description TEXT
 );
 
 
--- Alter the payments table, add the column of `zipcode`
--- to specify where the transaction was made
+-- Alter the payments table, add the column of `zipcode` to specify where the transaction was made
+ALTER TABLE payments ADD zipcode INTEGER;
 
 
 -- Insert 20 rows into the payments table
