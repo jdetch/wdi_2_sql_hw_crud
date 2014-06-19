@@ -14,7 +14,7 @@ CREATE DATABASE bank_homework;
 CREATE TABLE payments (
   id SERIAL PRIMARY KEY,
   -- need DATETIME instead? Couldn't find in documentation
-  created_at DATE,
+  created_at TIMESTAMP,
   amount NUMERIC (30, 2),
   payer_name TEXT,
   recipient_name TEXT,
@@ -31,27 +31,27 @@ ALTER TABLE payments ADD zipcode INTEGER;
 -- try to keep the accounts positive and have at least three different payers.
 
 INSERT INTO payments (created_at, amount, payer_name, recipient_name, description, zipcode) VALUES
-('2004-06-03', 100.99, 'John Smith', 'Bank of America', 'Deposit', 02110),
-('2011-11-11', 500.01, 'Caitlin Sherman', 'Citibank', 'Deposit', 02110),
-('2012-09-09', 250.78, 'Dean Libet', 'TD Ameritrade', 'Deposit', 11234),
-('2008-01-02', 1800.00, 'Ana Johnson', 'Cindy Lou', 'Utilities', 11455),
-('1999-05-23', 3600.00, 'Duncan Martin', 'Bob Phillips', 'Rent', 56783),
-('1987-06-23', 140.50, 'Grady Smith', 'Bank of America', 'Withdrawal', 09987),
-('2007-10-16', 70.00, 'Christina Vix', 'Shoprite', 'Groceries', 45633),
-('2004-05-31', 4500.00, 'Joanna Guard', 'Car Town', 'Used Car', 11145),
-('2001-04-18', 20000.00, 'Kate Nicks', 'Joe Shmoe', 'Down Payment', 87788),
-('2006-07-08', 567.89, 'Edith Jones', 'Vacation Central', 'Bungalow', 45678),
-('2014-01-22', 2875.00, 'John Doe', 'GA', 'WDI Course', 02446),
-('2014-02-22', 2875.00, 'John Doe', 'GA', 'WDI Course', 02446),
-('2014-03-22', 2875.00, 'John Doe', 'GA', 'WDI Course', 02446),
-('2014-04-22', 2875.00, 'John Doe', 'GA', 'WDI Course', 02446),
-('2014-01-22', 875.00, 'Jane Doe', 'GA', 'UX Course', 11123),
-('2014-02-22', 875.00, 'Jane Doe', 'GA', 'UX Course', 11123),
-('2014-03-22', 875.00, 'Jane Doe', 'GA', 'UX Course', 11123),
-('2002-12-22', 1.00, 'Mom', 'Son', 'Lost Tooth', 06877),
-('2013-09-14', 51.00, 'Cody Sperry', 'Peter Sperry', 'Cell Phone', 90877),
-('2000-03-14', 24.99, 'Veronica Lewis', 'H&M', 'New Shirt', 90210),
-('2014-04-22', 2875, 'Jane Doe', 'GA', 'UX Course', 45677);
+('2004-06-03 01:00:00', 100.99, 'John Smith', 'Bank of America', 'Deposit', 02110),
+('2011-11-11 01:30:00', 500.01, 'Caitlin Sherman', 'Citibank', 'Deposit', 02110),
+('2012-09-09 02:00:00', 250.78, 'Dean Libet', 'TD Ameritrade', 'Deposit', 11234),
+('2008-01-02 02:15:00', 1800.00, 'Ana Johnson', 'Cindy Lou', 'Utilities', 11455),
+('1999-05-23 02:30:00', 3600.00, 'Duncan Martin', 'Bob Phillips', 'Rent', 56783),
+('1987-06-23 02:45:00', 140.50, 'Grady Smith', 'Bank of America', 'Withdrawal', 09987),
+('2007-10-16 03:00:00', 70.00, 'Christina Vix', 'Shoprite', 'Groceries', 45633),
+('2004-05-31 03:15:00', 4500.00, 'Joanna Guard', 'Car Town', 'Used Car', 11145),
+('2001-04-18 03:30:00', 20000.00, 'Kate Nicks', 'Joe Shmoe', 'Down Payment', 87788),
+('2006-07-08 04:00:00', 567.89, 'Edith Jones', 'Vacation Central', 'Bungalow', 45678),
+('2014-01-22 04:15:00', 2875.00, 'John Doe', 'GA', 'WDI Course', 02446),
+('2014-02-22 04:30:00', 2875.00, 'John Doe', 'GA', 'WDI Course', 02446),
+('2014-03-22 05:00:00', 2875.00, 'John Doe', 'GA', 'WDI Course', 02446),
+('2014-04-22 06:00:00', 2875.00, 'John Doe', 'GA', 'WDI Course', 02446),
+('2014-01-22 07:00:00', 875.00, 'Jane Doe', 'GA', 'UX Course', 11123),
+('2014-02-22 08:00:00', 875.00, 'Jane Doe', 'GA', 'UX Course', 11123),
+('2014-03-22 08:30:00', 875.00, 'Jane Doe', 'GA', 'UX Course', 11123),
+('2002-12-22 09:00:00', 1.00, 'Mom', 'Son', 'Lost Tooth', 06877),
+('2013-09-14 10:00:00', 51.00, 'Cody Sperry', 'Peter Sperry', 'Cell Phone', 90877),
+('2000-03-14 11:00:00', 24.99, 'Veronica Lewis', 'H&M', 'New Shirt', 90210),
+('2014-04-22 12:00:00', 2875, 'Jane Doe', 'GA', 'UX Course', 45677);
 
 
 
