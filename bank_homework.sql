@@ -82,7 +82,7 @@ SELECT DISTINCT recipient_name FROM payments;
 
 
 -- In a single query, select all payments created in the past week
-
+SELECT * FROM payments WHERE created_at > (CURRENT_TIMESTAMP - interval '7 days');
 
 -- In a single query, select all payments with a blank description
 SELECT * FROM payments WHERE description is NULL;
